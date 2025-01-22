@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.servicos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.servico-item {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.servico-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.servico-info {
+    flex-grow: 1;
+}
+
+.servico-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.servico-info p {
+    font-size: 14px;
+    color: #bbb;
+    margin: 5px 0;
+}
+
+.servico-info .preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.servico-info .duracao {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.agendar-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.agendar-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+    background-color: #ff6600;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+

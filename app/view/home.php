@@ -22,8 +22,6 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Cabeleleira Leila. Todos os direitos reservados.</p>
-    </footer>
+    
 </body>
 </html>
