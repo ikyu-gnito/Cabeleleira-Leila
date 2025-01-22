@@ -1,3 +1,5 @@
+<?php include '../app/views/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,3 +27,5 @@
     
 </body>
 </html>
+
+<?php include '../app/views/footer.php'; ?>
