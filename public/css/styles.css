@@ -1,9 +1,40 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
+    background-color: #ffffcc;
+    color: #080808;
     margin: 0;
     padding: 0;
+}
+
+/* Estilo para o container do nav */
+nav {
+    background-color: #841b2d; /* Cor de fundo */
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+/* Estilo para o ul no menu */
+nav ul {
+    list-style-type: none; /* Remove os marcadores */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove espaçamento interno */
+    display: flex; /* Deixa os itens na horizontal */
+    justify-content: center; /* Centraliza os itens */
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os links do menu */
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    background-color: #bf4f51; /* Cor de fundo ao passar o mouse */
 }
 
 main {
@@ -12,6 +43,7 @@ main {
 
 h1 {
     font-size: 24px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -90,13 +122,15 @@ h1 {
 
 /* Footer styles */
 footer {
-    background-color: #ff6600;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+        position: fixed; /* Fixa o footer na tela */
+        bottom: 0; /* Coloca o footer no final da tela */
+        left: 0;
+        width: 100%; /* Ocupa toda a largura da página */
+        background-color: #841b2d; /* Cor de fundo */
+        color: white; /* Cor do texto */
+        text-align: center; /* Centraliza o texto */
+        padding: 10px 0; /* Espaçamento interno */
+        font-size: 14px; /* Tamanho da fonte */
 }
 
 
