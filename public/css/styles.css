@@ -6,6 +6,15 @@ body {
     padding: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
 /* Estilo para o container do nav */
 nav {
     background-color: #841b2d; /* Cor de fundo */
@@ -37,16 +46,25 @@ nav ul li a:hover {
     background-color: #bf4f51; /* Cor de fundo ao passar o mouse */
 }
 
-main {
+header {
+    color: #841b2d;
+    text-align: center;
     padding: 20px;
+    margin-bottom: 20px;
 }
-
 h1 {
     font-size: 24px;
     justify-content: center;
     margin-bottom: 20px;
+    color: #480607;
 }
 
+h2{
+    color: #480607;
+    font-size: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 .search-bar {
     margin-bottom: 20px;
 }
@@ -68,7 +86,7 @@ h1 {
 .servico-item {
     display: flex;
     align-items: center;
-    background-color: #222;
+    background-color: #cc9966;
     padding: 15px;
     border-radius: 10px;
     gap: 15px;
@@ -91,7 +109,7 @@ h1 {
 
 .servico-info p {
     font-size: 14px;
-    color: #bbb;
+    color: #592720;
     margin: 5px 0;
 }
 

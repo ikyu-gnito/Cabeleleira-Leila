@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>Bem-vindo à Cabeleleira Leila</h1>
-    </header>
+    </header>  
     <main>
         <section id="services">
             <h2>Nossos Serviços</h2>

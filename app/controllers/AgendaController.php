@@ -1,5 +1,4 @@
 <?php
-
     require_once '../app/models/ServicoModel.php';
 
     class AgendaController {
