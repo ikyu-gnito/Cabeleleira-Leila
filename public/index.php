@@ -8,7 +8,7 @@
 
     // Captura a rota da URL (ex.: ?route=home)
     $route = isset($_GET['route']) ? $_GET['route'] : 'home';
-
+   
     class Router {
         private $routes = [];
 

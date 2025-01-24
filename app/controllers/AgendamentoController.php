@@ -1,6 +1,6 @@
 <?php
-
-class AgendamentoController {
+    //controller para agendamento
+    class AgendamentoController {
     private $agendamentoModel;
 
     public function __construct() {
@@ -8,8 +8,7 @@ class AgendamentoController {
         $this->agendamentoModel = new AgendamentoModel();
     }
 
-    // Método agendar (novo ou atualizado)
-    public function agendar() {
+    public function agendar(){
         // Verificar se a requisição é POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Obter os dados enviados pelo formulário

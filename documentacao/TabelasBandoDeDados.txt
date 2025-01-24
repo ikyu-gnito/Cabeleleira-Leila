@@ -1,0 +1,30 @@
+#Tabelas utilizadas no banco de dados
+
+#Nome da database: cabeleleiraLeila
+
+##Tabela pessoa (tabela para poder ter acesso a cliente e também funcionarios)
+- id: com auto incremento
+- tipoPessoa: para poder definir adm para poder ter acesso a parte de dados
+- nome: nome da pessoa
+- login: para poder ter um controle e se caso necessite mande algum email
+- senha: por questão de autenticidade 
+- wpp: para ter um controle de quem pode mandar mensagem pelo whatsapp e confirmar o agendamento
+- celular: número de celular para confirmação
+
+##Tabela servico (tabela de serviço oferecido pelo salão)
+- id: com auto incremento
+- nome: nome do serviço
+- descricao: descrição do serviço 
+- preco: preço do serviço oferecido
+- duracao: duração em média do serviço oferecido
+- imagem: imagem tema do serviço oferecido, com máximo de 100 caracteres de url
+
+##Tabela agendamento (tabela de agendamento dos clientes e poder consultar posteriormente)
+- id: auto incremento para pesquisas posteriores 
+- idCliente: id do cliente que está realizando o agendamento 
+- idServico: id do serviço oferecido
+- totalServico: total em preço do serviço requerido
+- dtaAgendamento: a data do agendamento que está sendo requerida pelo cliente 
+- horaAgendamento: a hora do agendamento que está sendo requerida pelo cliente 
+- agendadoNoDia: qual foi o dia que o cliente realizou o agendamnto
+- situacao: a situação que está esse agendamento tendo três opções [pendente, confirmado, cancelado] 
