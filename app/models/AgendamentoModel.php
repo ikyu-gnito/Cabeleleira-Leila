@@ -6,29 +6,29 @@
         public function __construct() {
             $this->db = getDBConnection(); // Função para conexão com o banco
         }
-        public function criarAgendamento($cliente_id, $servico_id, $data, $hora) {
+        public function criarAgendamento($idCliente, $idServico, $dataAgendamento, $horaAgendamento) {
             $sql = "INSERT INTO agendamentos (idCliente, idServico, dtaAgendamento, horaAgendamento, status)
-                    VALUES (:cliente_id, :servico_id, :data_agendamento, :hora_agendamento, 'Pendente')";
+                    VALUES (:idCliente, :idServico, :dtaAgendamento, :horaAgendamento, 'Pendente')";
 
             $stmt = $this->db->prepare($sql);
-            $stmt->bindParam(':cliente_id', $cliente_id);
-            $stmt->bindParam(':servico_id', $servico_id);
-            $stmt->bindParam(':data_agendamento', $data);
-            $stmt->bindParam(':hora_agendamento', $hora);
+            $stmt->bindParam(':idCliente', $idCliente);
+            $stmt->bindParam(':idServico', $idServico);
+            $stmt->bindParam(':dtaAgendamento', $dtaAgendamento);
+            $stmt->bindParam(':horaAgendamento', $horaAgendamento);
 
             return $stmt->execute();
         }
 
         // Verificar agendamentos na mesma semana para o mesmo cliente
-        public function verificarAgendamentoMesmoCliente($cliente_id, $data) {
+        public function verificarAgendamentoMesmoCliente($idCliente, $dtaAgendamento) {
             $stmt = $this->db->prepare("
                 SELECT dtaAgendamento
                 FROM agendamento
                 WHERE idCliente = :cliente_id
                 AND YEARWEEK(dtaAgendamento, 1) = YEARWEEK(:data, 1)
             ");
-            $stmt->bindParam(':cliente_id', $cliente_id);
-            $stmt->bindParam(':data', $data);
+            $stmt->bindParam(':idCliente', $idCliente);
+            $stmt->bindParam(':dtaAgendamento', $dtaAgendamento);
             $stmt->execute();
             return $stmt->fetch(PDO::FETCH_ASSOC); // Retorna a data se encontrada
         }

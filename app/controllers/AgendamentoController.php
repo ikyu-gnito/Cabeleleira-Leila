@@ -12,29 +12,29 @@
         // Verificar se a requisição é POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Obter os dados enviados pelo formulário
-            $servico_id = $_POST['servico_id'];
-            $data = $_POST['data'] ?? date('Y-m-d'); // Data enviada ou padrão
-            $hora = $_POST['hora'] ?? date('H:i:s'); // Hora enviada ou padrão
+            $idServico = $_POST['idServico'] ?? null;
+            $dtaAgendamento = $_POST['dtaAgendamento'] ?? date('Y-m-d'); 
+            $horaAgendamento = $_POST['horaAgendamento'] ?? date('H:i:s'); 
 
             // Simulação de cliente logado (substitua por sistema de autenticação)
             session_start();
-            $cliente_id = $_SESSION['cliente_id'] ?? null;
+            $idCliente = $_SESSION['idCliente'] ?? null;
 
-            if (!$cliente_id) {
+            if (!$idCliente) {
                 echo "Você precisa estar logado para agendar!";
                 exit;
             }
 
             // Verificar se já existe um agendamento na mesma semana
-            $agendamentoExistente = $this->agendamentoModel->verificarAgendamentoMesmoCliente($cliente_id, $data);
+            $agendamentoExistente = $this->agendamentoModel->verificarAgendamentoMesmoCliente(idCliente: $idCliente, dtaAgendamento:  $dtaAgendamento);
 
             if ($agendamentoExistente) {
-                echo "Você já tem um agendamento nesta semana em: " . $agendamentoExistente['data_agendamento'];
+                echo "Você já tem um agendamento nesta semana em: " . $agendamentoExistente['dtaAgendamento'];
                 exit;
             }
 
             // Criar o agendamento no banco de dados
-            $resultado = $this->agendamentoModel->criarAgendamento($cliente_id, $servico_id, $data, $hora);
+            $resultado = $this->agendamentoModel->criarAgendamento(idCliente: $idCliente, idServico: $idServico, $dtaAgendamento, $horaAgendamento);
 
             if ($resultado) {
                 echo "Agendamento realizado com sucesso!";

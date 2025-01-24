@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-    <?php include '../app/views/header.php'; ?>
+    <?php include '../app/views/header.php'; 
+        $actionUrl = '/agendamento/agendar';
+    
+    ?>
+
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,10 +46,10 @@
                             </div>
 
                             <!-- Formulário de Confirmação -->
-                            <form action="agendamento/agendar" method="POST">
-                                <input type="hidden" name="servico_id" value="<?= $servico['id']; ?>">
-                                <input type="hidden" id="data-<?= $servico['id']; ?>" name="data" required>
-                                <input type="hidden" id="hora-<?= $servico['id']; ?>" name="hora" required>
+                            <form action="<?= htmlspecialchars($actionUrl); ?>" method="POST">
+                                <input type="hidden" name="idServico" value="<?= $servico['id']; ?>">
+                                <input type="hidden" id="dtaAgendamento-<?= $servico['id']; ?>" name="data" required>
+                                <input type="hidden" id="horaAgendamento-<?= $servico['id']; ?>" name="hora" required>
                                 <button type="submit" class="btn-confirm">Confirmar Agendamento</button>
                             </form>
                         </div>
