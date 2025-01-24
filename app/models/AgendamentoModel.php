@@ -18,7 +18,7 @@ class AgendamentoModel {
 
         return $stmt->execute();
     }
-    
+
     // Verificar agendamentos na mesma semana para o mesmo cliente
     public function verificarAgendamentoMesmoCliente($cliente_id, $data) {
         $stmt = $this->db->prepare("
@@ -32,4 +32,7 @@ class AgendamentoModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC); // Retorna a data se encontrada
     }
+
+   
+
 }

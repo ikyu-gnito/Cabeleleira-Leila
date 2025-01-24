@@ -4,9 +4,11 @@ class AgendamentoController {
     private $agendamentoModel;
 
     public function __construct() {
-        $this->agendamentoModel = new AgendamentoModel(); // Instancia o Model
+        // Instancia o Model
+        $this->agendamentoModel = new AgendamentoModel();
     }
 
+    // Método agendar (novo ou atualizado)
     public function agendar() {
         // Verificar se a requisição é POST
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -46,5 +48,7 @@ class AgendamentoController {
             echo "Método não permitido.";
         }
     }
+
 }
+
 
