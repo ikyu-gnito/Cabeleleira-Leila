@@ -1,13 +1,13 @@
 # Descrição do Programa
 
 ## Introdução
-Este documento fornece uma descrição detalhada do programa "Cabeleleira Leila". O objetivo deste programa é gerenciar as operações de um salão de beleza, incluindo agendamentos, cadastro de clientes, controle de estoque de produtos e serviços oferecidos.
+Este documento fornece uma descrição detalhada do programa "Cabeleleira Leila". O objetivo deste programa é gerenciar as operações de um salão de beleza, incluindo agendamentos, cadastro de clientes e serviços oferecidos.
 
 ## Funcionalidades
 1. **Cadastro de Clientes**: Permite o registro de novos clientes com informações pessoais e de contato.
 2. **Agendamento de Serviços**: Facilita a marcação de horários para diversos serviços oferecidos pelo salão.
 3. **Controle de Estoque**: Gerencia o inventário de produtos utilizados no salão.
-4. **Relatórios**: Gera relatórios detalhados sobre o desempenho do salão, incluindo número de atendimentos, produtos mais utilizados e faturamento.
+4. **Relatórios**: Gera relatórios detalhados sobre o desempenho do salão, incluindo número de atendimentos e faturamento.
 
 ## Tecnologias Utilizadas
 - **Linguagem de Programação**: PHP
@@ -17,7 +17,7 @@ Este documento fornece uma descrição detalhada do programa "Cabeleleira Leila"
 
 ## Requisitos do Sistema
 - **Servidor**: XAMPP 
-- **Navegador**: Compatível com as últimas versões do Chrome, Firefox, ou Edge
+- **Navegador**: Compatível Chrome, Firefox, ou Edge
 
 ## Instalação
 1. Clone o repositório do programa para o diretório do servidor web.
