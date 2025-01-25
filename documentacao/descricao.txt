@@ -26,4 +26,4 @@ Este documento fornece uma descrição detalhada do programa "Cabeleleira Leila"
 4. Inicie o servidor web e acesse o programa através do navegador.
 
 ## Conclusão
-Este documento serve como uma referência para entender as funcionalidades e a estrutura do programa "Cabeleleira Leila". Para mais detalhes sobre a implementação e uso, consulte a documentação técnica completa.
+Este documento serve como uma referência para entender as funcionalidades e a estrutura do programa "Cabeleleira Leila". 
